@@ -25,8 +25,8 @@ GEM
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    watir-webdriver (0.9.9)
-      selenium-webdriver (>= 2.46.2)
+    watir (6.10.3)
+      selenium-webdriver (~> 3.4, >= 3.4.1)
     webdrivers (3.2.4)
       nokogiri (~> 1.6)
       rubyzip (~> 1.0)
@@ -37,7 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   rspec (~> 3.7)!
-  watir-webdriver (~> 0.9.9)!
+  watir (~> 6.10, >= 6.10.3)!
   webdrivers (~> 3.2, >= 3.2.4)!
 
 BUNDLED WITH
