@@ -1,4 +1,4 @@
-require_relative '../pages/helpers/site'
+require_relative '../pages/helpers/Site'
 
 RSpec.configure do |config|
   config.before(:all) do

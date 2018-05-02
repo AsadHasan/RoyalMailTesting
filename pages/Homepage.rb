@@ -1,12 +1,12 @@
-require_relative '../pages/helpers/driver_factory'
+require_relative '../pages/helpers/DriverFactory'
 
 class Homepage < DriverFactory
-  def open()
+  def open
     @@browser.goto $BASE_URL
     self
   end
 
-  def search_address
+  def goto_search
     click_when_ready(:css => '.postcode-finder')
   end
 end
