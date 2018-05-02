@@ -7,6 +7,6 @@ class Homepage < DriverFactory
   end
 
   def search_address
-    click_when_ready(:xpath => "//*[text()='Find a postcode/address']")
+    click_when_ready(:css => '.postcode-finder')
   end
 end

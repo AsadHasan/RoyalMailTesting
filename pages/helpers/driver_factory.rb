@@ -25,6 +25,10 @@ class DriverFactory
 
   def click_when_ready(element_locator)
     Watir::Wait.until {@browser.element(element_locator).visible?}
-    @browser.button(element_locator).click
+    @browser.element(element_locator).click
+  end
+
+  def close_browser
+    @browser.quit unless @browser.nil?
   end
 end
