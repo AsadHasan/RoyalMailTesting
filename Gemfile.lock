@@ -8,6 +8,9 @@ GEM
     mini_portile2 (2.3.0)
     nokogiri (1.8.2-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    parallel (1.12.1)
+    parallel_tests (2.21.3)
+      parallel
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -36,6 +39,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  parallel_tests (~> 2.21, >= 2.21.3)!
   rspec (~> 3.7)!
   watir (~> 6.10, >= 6.10.3)!
   webdrivers (~> 3.2, >= 3.2.4)!
