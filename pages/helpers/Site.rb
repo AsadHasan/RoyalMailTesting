@@ -1,8 +1,8 @@
-require_relative '../helpers/DriverFactory'
+require_relative '../helpers/DriverHelper'
 require_relative '../../pages/Homepage'
 require_relative '../../pages/PostcodeFinder'
 
-class Site < DriverFactory
+class Site < DriverHelper
   def homepage
     @homepage = Homepage.new
   end

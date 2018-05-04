@@ -1,6 +1,6 @@
-require_relative '../pages/helpers/DriverFactory'
+require_relative '../pages/helpers/DriverHelper'
 
-class PostcodeFinder < DriverFactory
+class PostcodeFinder < DriverHelper
   def search_address
     search_field_locator = {:css => '#cp-search'}
     type_when_ready(search_field_locator, 'EC4Y 0HQ')
@@ -8,7 +8,8 @@ class PostcodeFinder < DriverFactory
     self
   end
 
-  def show_address_on_map
+  def address_on_map?
     click_when_ready(:css => '#map-link')
+    present?(:css => '#postcodefinder-map')
   end
 end

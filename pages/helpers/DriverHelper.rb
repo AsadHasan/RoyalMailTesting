@@ -1,9 +1,10 @@
 require 'watir'
 require 'webdrivers'
 require 'yaml'
+require 'timeout'
 require_relative '../../env'
 
-class DriverFactory
+class DriverHelper
   @@browser = nil
 
   def initialize
@@ -27,6 +28,14 @@ class DriverFactory
 
   def type_when_ready(element_locator, text)
     @@browser.element(element_locator).wait_until_present.send_keys(text)
+  end
+
+  def present?(element_locator)
+    @@browser.element(element_locator).wait_until_present
+    true
+
+  rescue Timeout::Error
+    false
   end
 
   def close_browser
